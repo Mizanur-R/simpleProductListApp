@@ -32,6 +32,10 @@ function App() {
     }))
   }
 
+  const total = products.reduce((acc, cur) => {
+    return acc + cur.total
+  }, 0)
+
   return (
     <div>
       <h1>Products List</h1>
@@ -58,6 +62,10 @@ function App() {
           ))}
         </tbody>
       </table>
+      <div>
+        {total > 0 && <h1>Total = {total}৳</h1>}
+        
+      </div>
     </div>
 
 
