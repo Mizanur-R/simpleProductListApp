@@ -1,27 +1,8 @@
-
-import shortid from 'shortid'
-import './index.css'
 import React, { useState } from 'react'
+import './index.css'
 import productsList from './products'
-
-
-const TableRow = ({ id, name, stock, price, quantity, total, inCrement, deCrement }) => {
-  return (
-    <tr>
-      <td>{id}</td>
-      <td>{name}</td>
-      <td>{stock}</td>
-      <td>{price}</td>
-      <td>{quantity}</td>
-      <td>{total}</td>
-      <td>
-        <button onClick={() => inCrement(id)} disabled={stock === quantity}>+</button>
-        <button onClick={() => deCrement(id)} disabled={quantity === 0}>-</button>
-      </td>
-    </tr>
-  )
-}
-
+import TableRow from './Component/TableRow/TableRow'
+ 
 function App() {
 
   const [products, setProducts] = useState(productsList.map(item => ({
