@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace, sans-serif;
+}
+.app{
+  display: flex;
+  justify-content: space-between; 
+  padding: 20px;
+  background: rgba(83, 55, 2, 0.61);
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+table thead{
+  background: #ff8989d1;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+button {
+  padding: 0 5px;
+}
